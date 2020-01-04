@@ -19,7 +19,7 @@ public final class EntityManagerFactoryProxy {
         return new EntityManagerFactoryProxy(delegate);
     }
 
-    public EntityManagerFactoryProxy addListenerInitializer(Supplier<PersistenceEventListener> listenerInitializer) {
+    public EntityManagerFactoryProxy addPersistentListenerInitializer(Supplier<PersistenceEventListener> listenerInitializer) {
         this.listenerInitializers.add(listenerInitializer);
         return this;
     }

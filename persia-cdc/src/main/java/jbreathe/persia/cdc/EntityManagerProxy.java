@@ -18,7 +18,7 @@ public final class EntityManagerProxy {
         return new EntityManagerProxy(delegate);
     }
 
-    public EntityManagerProxy addListener(PersistenceEventListener listener) {
+    public EntityManagerProxy addPersistenceListener(PersistenceEventListener listener) {
         this.listeners.add(listener);
         return this;
     }
