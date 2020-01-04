@@ -3,11 +3,11 @@ package jbreathe.persia.cdc;
 import javax.persistence.EntityTransaction;
 import java.util.List;
 
-public final class EntityTransactionProxy implements EntityTransaction {
+public final class EventableEntityTransactionProxy implements EntityTransaction {
     private final EntityTransaction delegate;
     private final List<PersistenceEventListener> eventListeners;
 
-    public EntityTransactionProxy(EntityTransaction delegate, List<PersistenceEventListener> eventListeners) {
+    EventableEntityTransactionProxy(EntityTransaction delegate, List<PersistenceEventListener> eventListeners) {
         this.delegate = delegate;
         this.eventListeners = eventListeners;
     }
